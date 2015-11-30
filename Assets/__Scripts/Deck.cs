@@ -61,7 +61,6 @@ public class Deck : MonoBehaviour
 		s += " x=" + xmlr.xml["xml"][0]["decorator"][0].att("x");
 		s += " y=" + xmlr.xml["xml"][0]["decorator"][0].att("y");
 		s += " scale=" + xmlr.xml["xml"][0]["decorator"][0].att("scale");
-		//print(s);
 
 		// Read decorators for all Cards
 		decorators = new List<Decorator>(); // Init the List of Decorators
@@ -209,7 +208,8 @@ public class Deck : MonoBehaviour
 					tSR.sprite = dictSuits[card.suit];
 				}
 				else
-				{                 //if it's not a suit, it's a rank deco
+				{                
+					//if it's not a suit, it's a rank deco
 					tGO = Instantiate(prefabSprite) as GameObject;
 					tSR = tGO.GetComponent<SpriteRenderer>();
 					// Get the proper Sprite to show this rank
